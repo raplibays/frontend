@@ -1,0 +1,42 @@
+/* Responsive styles for navigation */
+#navigationDrawer {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    
+  }
+  
+  #navigationDrawer.open {
+    display: flex;
+    max-height: 500px; /* Adjust this value based on the number of menu items */
+  }
+  
+  #navigationDrawer a {
+    padding: 1rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  #navigationDrawer a:last-child {
+    border-bottom: none;
+  }
+  
+  @media (min-width: 768px) {
+    #navigationDrawer {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      max-height: none;
+      background-color: transparent;
+      padding: 0;
+    }
+    
+    #navigationDrawer a {
+      padding: 0;
+      border: none;
+    }
+  }
+  
